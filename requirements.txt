@@ -1,0 +1,12 @@
+ftfy
+wandb
+lmdb
+pyarrow
+regex
+loguru
+pycocotools
+matplotlib
+tqdm
+opencv-python
+pycocotools
+matplotlib
