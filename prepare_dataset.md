@@ -28,13 +28,13 @@ wget https://bvisionweb1.cs.unc.edu/licheng/referit/data/refcoco.zip
 unzip refcoco.zip && rm refcoco.zip
 
 # convert
-python ../tools/data_process.py --data_root . --output_dir . --dataset refcoco --split unc --generate_mask
+python tools/data_process.py --data_root . --output_dir . --dataset refcoco --split unc --generate_mask
 
 # lmdb
-python ../tools/folder2lmdb.py -j anns/refcoco/train.json -i images/train2014/ -m masks/refcoco -o lmdb/refcoco
-python ../tools/folder2lmdb.py -j anns/refcoco/val.json -i images/train2014/ -m masks/refcoco -o lmdb/refcoco
-python ../tools/folder2lmdb.py -j anns/refcoco/testA.json -i images/train2014/ -m masks/refcoco -o lmdb/refcoco
-python ../tools/folder2lmdb.py -j anns/refcoco/testB.json -i images/train2014/ -m masks/refcoco -o lmdb/refcoco
+python tools/folder2lmdb.py -j anns/refcoco/train.json -i images/train2014/ -m masks/refcoco -o lmdb/refcoco
+python tools/folder2lmdb.py -j anns/refcoco/val.json -i images/train2014/ -m masks/refcoco -o lmdb/refcoco
+python tools/folder2lmdb.py -j anns/refcoco/testA.json -i images/train2014/ -m masks/refcoco -o lmdb/refcoco
+python tools/folder2lmdb.py -j anns/refcoco/testB.json -i images/train2014/ -m masks/refcoco -o lmdb/refcoco
 
 # clean
 rm -r refcoco
